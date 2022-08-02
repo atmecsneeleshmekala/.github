@@ -67,7 +67,7 @@ async function getTreeViewData(templatesData: ResponseObject[]) {
     var sortedDesc: TemplateData[] = _.sortBy(result, 'version').reverse();
     let firstElement: ResponseObject = sortedDesc[0];
     sortedDesc.shift();
-    firstElement['children'] = sortedDesc.length > 0 ? sortedDesc : null;
+    firstElement['children'] = sortedDesc.length > 0 ? sortedDesc : null ;
     TemplateData.push(firstElement);
   }
   return TemplateData;
