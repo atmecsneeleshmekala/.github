@@ -1,0 +1,23 @@
+{
+  "name": "get-templates-lambda",
+  "version": "1.0.0",
+  "description": "get all templates data",
+  "main": "lambda.js",
+  "scripts": {
+    "clean:build": "rimraf dist",
+    "build": "npm run clean:build && mkdir dist && cp package.json package-lock.json tsconfig.json index.ts dist/ && cp -r src dist/ && cd dist && tsc && npm install --only=prod",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/underscore": "^1.11.4",
+    "underscore": "^1.13.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "aws-sdk": "^2.901.0",
+    "rimraf": "^3.0.2",
+    "typescript": "~3.9.7"
+  }
+}
